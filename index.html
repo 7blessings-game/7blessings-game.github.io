@@ -138,7 +138,7 @@
             txt1: "Se realize um ataque ao portão principal com todas as forças, assumindo que os dragões serão capazes de destruir os portões principais.",
             target1: 10,
             txt2: "Se realize um cerco de alguns dias, e um posterior ataque noturno, utilizando os dragões como distração no flanco oposto.", target2: 11,
-            img: "pictures/13.jpeg"
+            img: "pictures/13.jpg"
         };
         list[3] = {
             desc: 'Durante a viagem apercebes-te que alguém está a ser atacado no meio da estrada. Dois homens, um de aspeto nobre e outro que deve ser seu serviçal, estão a ser abordados por quatro assaltantes e tu...',
@@ -273,9 +273,16 @@
         function start() {
             ler(14);
         }
-		
+		var toggle=false;
 		function play_audio(){
-			 document.getElementById("Audio").play();
+			toggle=!toggle;
+			play = document.getElementById("Audio");
+			if (toggle)
+				play.play();
+			else
+				play.pause();
+				
+			
 		}
     </script>
 </head>
